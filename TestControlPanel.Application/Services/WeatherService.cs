@@ -1,4 +1,8 @@
-﻿using System;
+﻿using AutoMapper;
+
+using Microsoft.Extensions.Logging;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,12 +14,13 @@ using TestControlPanel.Models;
 
 namespace TestControlPanel.Application.Services
 {
-    public class WeatherService : IWeatherService
+    public class WeatherService : BaseService<WeatherService>, IWeatherService
     {
         #region Fields, Properties & Construtor
         private readonly IWeatherRepo weatherRepo;
 
-        public WeatherService(IWeatherRepo weatherRepo)
+        public WeatherService(IMapper mapper, ILogger<WeatherService> logger, IWeatherRepo weatherRepo)
+            : base(mapper, logger)
         {
             this.weatherRepo = weatherRepo;
         }
@@ -26,8 +31,8 @@ namespace TestControlPanel.Application.Services
         public async Task<IEnumerable<WeatherForecastViewModel>> GetWeather()
         {
             var entity = await weatherRepo.GetWeather();
-
-            return default;
+            var model = mapper.Map<IEnumerable<WeatherForecastViewModel>>(entity);
+            return model;
         }
 
         #endregion

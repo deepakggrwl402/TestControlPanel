@@ -17,8 +17,4 @@
     <ProjectReference Include="..\TestControlPanel.Models\TestControlPanel.Models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Mappings\" />
-  </ItemGroup>
-
 </Project>

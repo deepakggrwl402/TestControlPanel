@@ -1,4 +1,6 @@
-namespace TestControlPanel.API
+﻿using System;
+
+namespace TestControlPanel.Domain.Entities
 {
     public class WeatherForecast
     {

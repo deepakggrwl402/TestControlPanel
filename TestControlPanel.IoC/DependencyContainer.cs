@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
+using TestControlPanel.Application.Interfaces;
 using TestControlPanel.Application.Services;
-using TestControlPanel.Domain.Interfaces.Application;
-using TestControlPanel.Domain.Interfaces.Infrastructure;
+using TestControlPanel.Domain.Interfaces;
 using TestControlPanel.Infra.Repositories;
 
 namespace TestControlPanel.IoC

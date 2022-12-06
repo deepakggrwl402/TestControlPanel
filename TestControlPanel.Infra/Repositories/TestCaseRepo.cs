@@ -1,4 +1,4 @@
-﻿using TestControlPanel.Domain.Interfaces.Infrastructure;
+﻿using TestControlPanel.Domain.Interfaces;
 
 namespace TestControlPanel.Infra.Repositories
 {

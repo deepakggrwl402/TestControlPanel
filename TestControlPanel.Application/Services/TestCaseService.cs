@@ -1,4 +1,4 @@
-﻿using TestControlPanel.Domain.Interfaces.Application;
+﻿using TestControlPanel.Application.Interfaces;
 
 namespace TestControlPanel.Application.Services
 {

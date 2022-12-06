@@ -20,6 +20,7 @@
     <ProjectReference Include="..\TestControlPanel.Application\TestControlPanel.Application.csproj" />
     <ProjectReference Include="..\TestControlPanel.Domain\TestControlPanel.Domain.csproj" />
     <ProjectReference Include="..\TestControlPanel.Infra\TestControlPanel.Infra.csproj" />
+    <ProjectReference Include="..\TestControlPanel.IoC\TestControlPanel.IoC.csproj" />
     <ProjectReference Include="..\TestControlPanel.Models\TestControlPanel.Models.csproj" />
   </ItemGroup>
 

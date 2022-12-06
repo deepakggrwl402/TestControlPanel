@@ -1,10 +1,7 @@
-
-
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 
 using TestControlPanel.Infra.Context;
+using TestControlPanel.IoC;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +15,8 @@ builder.Services.AddDbContext<TestControlPanelDBContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("TestControlPanelDBConnection"));
 });
+
+DependencyContainer.RegisterServices(builder.Services);
 
 var app = builder.Build();
 

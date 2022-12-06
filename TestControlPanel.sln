@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestControlPanel.Domain", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestControlPanel.Models", "TestControlPanel.Models\TestControlPanel.Models.csproj", "{F8FD4E45-C303-40D6-8FA6-487FAA106ABA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestControlPanel.IoC", "TestControlPanel.IoC\TestControlPanel.IoC.csproj", "{21938EDB-C88E-4B4A-A9D8-87A0320B07A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{F8FD4E45-C303-40D6-8FA6-487FAA106ABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8FD4E45-C303-40D6-8FA6-487FAA106ABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8FD4E45-C303-40D6-8FA6-487FAA106ABA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21938EDB-C88E-4B4A-A9D8-87A0320B07A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21938EDB-C88E-4B4A-A9D8-87A0320B07A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21938EDB-C88E-4B4A-A9D8-87A0320B07A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21938EDB-C88E-4B4A-A9D8-87A0320B07A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +72,7 @@ Global
 		{82A0DDC1-7CE0-41F2-AA58-EDF457914D94} = {43776491-8EE8-468F-BA92-ED19930DD8EA}
 		{9EACFD45-8D22-4D71-996B-00FFF481B782} = {F91E2AC2-447D-4E67-A99A-D6E3AB8D4A5C}
 		{F8FD4E45-C303-40D6-8FA6-487FAA106ABA} = {C189881D-E0D4-40A8-8183-CCE9E469FF46}
+		{21938EDB-C88E-4B4A-A9D8-87A0320B07A0} = {43776491-8EE8-468F-BA92-ED19930DD8EA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1A21BCB5-500C-4034-B6E4-97726CA60987}

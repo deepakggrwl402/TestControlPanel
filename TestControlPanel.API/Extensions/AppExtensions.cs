@@ -18,5 +18,10 @@ namespace TestControlPanel.API.Extensions
         {
             app.UseMiddleware<ErrorHandlerMiddleware>();
         }
+
+        public static void UseCorsExtension(this IApplicationBuilder app)
+        {
+            app.UseCors("CorsPolicy");
+        }
     }
 }

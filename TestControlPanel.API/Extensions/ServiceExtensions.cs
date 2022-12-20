@@ -51,5 +51,19 @@ namespace TestControlPanel.API.Extensions
                 //});
             });
         }
+
+        public static void AddCorsExtension(this IServiceCollection services)
+        {
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: "CorsPolicy",
+                    policy =>
+                    {
+                        policy.AllowAnyOrigin();
+                        policy.AllowAnyHeader();
+                        policy.AllowAnyMethod();
+                    });
+            });
+        }
     }
 }

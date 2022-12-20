@@ -10,6 +10,7 @@ builder.Services.AddEndpointsApiExplorer();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddSwaggerExtension();
+builder.Services.AddCorsExtension();
 
 DependencyContainer.RegisterServices(builder.Services);
 DependencyContainer.AddAutoMapper(builder.Services);
@@ -26,6 +27,7 @@ if (app.Environment.IsDevelopment())
     app.UseHttpLogging();
 }
 
+app.UseCorsExtension();
 app.UseAuthorization();
 app.MapControllers();
 await app.RunAsync();

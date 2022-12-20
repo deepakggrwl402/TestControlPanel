@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 using TestControlPanel.Application.Interfaces;
 using TestControlPanel.Models;
+using TestControlPanel.Models.Wrappers;
 
 namespace TestControlPanel.API.Controllers
 {
@@ -16,12 +17,11 @@ namespace TestControlPanel.API.Controllers
             this.weatherService = weatherService;
         }
 
-
         [HttpGet(Name = "GetWeatherForecast")]
-        public async Task<IEnumerable<WeatherForecastViewModel>> Get()
+        public async Task<Response<IEnumerable<WeatherForecastViewModel>>> Get()
         {
             var response = await weatherService.GetWeather();
-            return response;
+            return Response<IEnumerable<WeatherForecastViewModel>>.GetSuccess(response);
         }
     }
 }

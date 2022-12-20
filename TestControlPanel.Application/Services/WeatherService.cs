@@ -2,12 +2,6 @@
 
 using Microsoft.Extensions.Logging;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using TestControlPanel.Application.Interfaces;
 using TestControlPanel.Domain.Interfaces;
 using TestControlPanel.Models;
@@ -17,6 +11,7 @@ namespace TestControlPanel.Application.Services
     public class WeatherService : BaseService<WeatherService>, IWeatherService
     {
         #region Fields, Properties & Construtor
+
         private readonly IWeatherRepo weatherRepo;
 
         public WeatherService(IMapper mapper, ILogger<WeatherService> logger, IWeatherRepo weatherRepo)
@@ -24,7 +19,8 @@ namespace TestControlPanel.Application.Services
         {
             this.weatherRepo = weatherRepo;
         }
-        #endregion
+
+        #endregion Fields, Properties & Construtor
 
         #region Tasks & Methods
 
@@ -35,6 +31,6 @@ namespace TestControlPanel.Application.Services
             return model;
         }
 
-        #endregion
+        #endregion Tasks & Methods
     }
 }

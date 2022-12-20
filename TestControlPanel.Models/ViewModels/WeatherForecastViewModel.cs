@@ -1,4 +1,6 @@
-﻿namespace TestControlPanel.Models
+﻿using System.Text.Json.Serialization;
+
+namespace TestControlPanel.Models
 {
     public class WeatherForecastViewModel
     {
@@ -8,6 +10,7 @@
 
         public string? Summary { get; set; }
 
+        [JsonIgnore]
         public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
     }
 }

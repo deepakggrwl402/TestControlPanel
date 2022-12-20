@@ -14,4 +14,6 @@ builder.Services.AppServiceProvider();
 await builder.Services.AddAppSettings();
 builder.Services.AddRefitService();
 
-await builder.Build().RunAsync();
+var app = builder.Build();
+
+await app.RunAsync();

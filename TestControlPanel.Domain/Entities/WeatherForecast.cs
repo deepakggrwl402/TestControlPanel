@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Text.Json.Serialization;
 
 namespace TestControlPanel.Domain.Entities
 {
@@ -10,6 +10,7 @@ namespace TestControlPanel.Domain.Entities
 
         public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 
+        [JsonIgnore]
         public string? Summary { get; set; }
     }
 }

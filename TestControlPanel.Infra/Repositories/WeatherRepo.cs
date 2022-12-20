@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using TestControlPanel.Domain.Entities;
+﻿using TestControlPanel.Domain.Entities;
 using TestControlPanel.Domain.Interfaces;
 
 namespace TestControlPanel.Infra.Repositories

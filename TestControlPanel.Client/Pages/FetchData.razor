@@ -1,12 +1,8 @@
 ﻿@page "/fetchdata"
-@using Refit;
-@using Services;
-@using System.Diagnostics;
-@using TestControlPanel.Models;
-@inject HttpClient Http
-@inject IWeatherService weatherService
-@inject ILogger<FetchData> logger
+@using TestControlPanel.Client.Services;
 
+@inject ILogger<FetchData> logger
+@inject IWeatherService weatherService
 <PageTitle>Weather forecast</PageTitle>
 
 <h1>Weather forecast</h1>
@@ -42,36 +38,4 @@ else
     </table>
 }
 
-@code {
 
-    private IEnumerable<WeatherForecastViewModel>? forecasts;
-
-    protected override async Task OnInitializedAsync()
-    {
-        await GetWeatherForecast();
-    }
-
-    private async Task GetWeatherForecast()
-    {
-        try
-        {
-            var response = await weatherService.GetWeatherForecast();
-            if (response != null && response.Succeeded)
-            {
-                if (response.ResponseCode == Models.Enums.ResponseCode.Success
-                    && response.Data != null && response.Data.Any())
-                {
-                    forecasts = response.Data;
-                }
-            }
-        }
-        catch (Exception ex) when (ex is HttpRequestException or ApiException)
-        {
-            logger.LogError(ex, ex.Message);
-        }
-        catch (Exception ex)
-        {
-            logger.LogError(ex, ex.Message);
-        }
-    }
-}

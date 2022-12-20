@@ -18,6 +18,7 @@ namespace TestControlPanel.API.Controllers
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
+        [ProducesDefaultResponseType(typeof(Response<IEnumerable<WeatherForecastViewModel>>))]
         public async Task<Response<IEnumerable<WeatherForecastViewModel>>> Get()
         {
             var response = await weatherService.GetWeather();

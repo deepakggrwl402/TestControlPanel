@@ -16,10 +16,7 @@ namespace TestControlPanel.Application.Mappings
         public WeatherProfile()
         {
             CreateMap<WeatherForecastViewModel, WeatherForecast>();
-            //CreateMap<IEnumerable<WeatherForecastViewModel>, IEnumerable<WeatherForecast>>();
-
             CreateMap<WeatherForecast, WeatherForecastViewModel>();
-            //CreateMap<IEnumerable<WeatherForecast>, IEnumerable<WeatherForecastViewModel>>();
         }
     }
 }
